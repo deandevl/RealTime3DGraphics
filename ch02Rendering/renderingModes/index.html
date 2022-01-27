@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Rendering Modes</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+    #ui {
+      margin-top: 20px;
+    }
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+  <script defer type="module" src="./main.js"></script>
+  <body>
+    <div id="container">
+      <div id="ui">
+        <label>Select a render
+          <select id="select_render">
+            <option value="NONE">NONE</option>
+            <option value="TRIANGLES">TRIANGLES</option>
+            <option value="LINES">LINES</option>
+            <option value="POINTS">POINTS</option>
+            <option value="LINE_LOOP">LINE_LOOP</option>
+            <option value="LINE_STRIP">LINE_STRIP</option>
+            <option value="TRIANGLE_STRIP">TRIANGLE_STRIP</option>
+            <option value="TRIANGLE_FAN">TRIANGLE_FAN</option>
+          </select>
+        </label>
+      </div>
+    <canvas id="my_canvas"></canvas>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>State Machine</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 1000px;
+      margin: 20px;
+    }
+    #info {
+      width: 200px;
+    }
+    canvas {
+      width: 700px;
+      height: 700px;
+      display: block;
+    }
+  </style>
+  <script type="module" src="./main.js"></script>
+  <body>
+    <div id="container">
+      <div id="info">
+        <label>Start Rendering
+          <input id="start_render" type="checkbox"/>
+        </label>
+        <table>
+          <tr>
+            <th>Buffer</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Usage</th>
+          </tr>
+          <tr>
+            <td>VBO:</td>
+            <td id="t-vbo-name"></td>
+            <td id="t-vbo-size"></td>
+            <td id="t-vbo-usage"></td>
+          </tr>
+          <tr>
+            <td>IBO:</td>
+            <td id="t-ibo-name"></td>
+            <td id="t-ibo-size"></td>
+            <td id="t-ibo-usage"></td>
+          </tr>
+        </table>
+
+        <ul>
+          <li>Is vertices a VBO? <strong id="s-is-vertices-vbo"></strong></li>
+          <li>Is coneVertexBuffer a VBO? <strong id="s-is-cone-vertex-buffer-vbo"></strong></li>
+        </ul>
+      </div>
+      <canvas id="my_canvas"></canvas>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "webgl_labs",
+  "version": "0.1.0",
+  "description": "Contains WebGL related lab exercises from the CS315 course of University of Regina, CA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deandevl/WebGL_Labs.git"
+  },
+  "keywords": [],
+  "author": "Rick Dean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deandevl/WebGL_Labs/issues"
+  },
+  "homepage": "https://github.com/deandevl/WebGL_Labs#readme",
+  "dependencies": {
+    "gl-matrix": "^3.4.3",
+    "web-gl-helpers": "git+https://github.com/deandevl/web-gl-helpers.git"
+  }
+}
