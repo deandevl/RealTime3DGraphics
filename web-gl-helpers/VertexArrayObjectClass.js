@@ -21,9 +21,9 @@ export default class VertexArrayObjectClass {
   }
 
   /**
-   * Bind Vertex Array Object
+   * Rebind the Vertex Array Object
    */
-  bind(){
+  rebind(){
     this.gl.bindVertexArray(this.vao);
   }
   /**

@@ -138,8 +138,8 @@ try {
   function draw(){
     initializeContext(gl,[0.0,0.0,0.0,1.0]);
 
-    // Bind VAO
-    vaoObj.bind();
+    // rebind VAO
+    vaoObj.rebind();
 
     // Draw
     gl.drawElements(gl.LINE_LOOP, indices.length, gl.UNSIGNED_SHORT, 0);

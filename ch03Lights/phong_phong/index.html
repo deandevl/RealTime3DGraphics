@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>phong_phong</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+    }
+    #ui {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+    .ui_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    canvas {
+      width: 900px;
+      height: 800px;
+      margin-left: 20px;
+    }
+    select {
+      background-color: black;
+      color: white;
+    }
+    output {
+      color: white;
+      width: 40px;
+    }
+  </style>
+  <script defer type="module" src="./main.js"></script>
+  <body>
+    <div id="container">
+      <div id="ui">
+
+        <label class="ui_item">Light Diffuse
+          <input id="light_diffuse_input" type="color" >
+        </label>
+
+        <div class="ui_item">
+          <label for="light_ambient_input">Light Ambient</label>
+          <input id="light_ambient_input" type="range" min="0" max="1" step="0.01"> =
+          <output id="light_ambient_output" for="light_ambient_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="light_specular_input">Light Specular</label>
+          <input id="light_specular_input" type="range" min="0" max="1" step="0.01"> =
+          <output id="light_specular_output" for="light_specular_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="x_trans_input">Translate Light X</label>
+          <input id="x_trans_input" name="x_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="x_out" for="x_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="y_trans_input">Translate Light Y</label>
+          <input id="y_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="y_out" for="y_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="z_trans_input">Translate Light Z</label>
+          <input id="z_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="z_out" for="z_trans_input"></output>
+        </div>
+
+        <label class="ui_item">Material Diffuse
+          <input id="material_diffuse_input" type="color">
+        </label>
+
+        <div class="ui_item">
+          <label for="material_ambient_input">Material Ambient</label>
+          <input id="material_ambient_input" type="range" min="0" max="1" step="0.01"> =
+          <output id="material_ambient_output" for="material_ambient_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="material_specular_input">Material Specular</label>
+          <input id="material_specular_input" type="range" min="0" max="1" step="0.01"> =
+          <output id="material_specular_output" for="material_specular_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="shininess_input">Shininess</label>
+          <input id="shininess_input" type="range" min="0" max="50" step="0.1"> =
+          <output id="shininess_output" for="shininess_input"></output>
+        </div>
+
+        <label class="ui_item">Background Color
+          <input id="background_color_input" type="color">
+        </label>
+
+        <label class="ui_item">Wireframe
+          <input id="wireframe_input" type="checkbox">
+        </label>
+      </div>
+      <canvas id="my_canvas"></canvas>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>positional_light</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  </head>
+  <style>
+    body { background-color: black}
+    #container {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+    }
+    #ui {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+    .ui_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    canvas {
+      width: 900px;
+      height: 800px;
+      margin-left: 20px;
+    }
+    output {
+      color: white;
+      width: 40px;
+    }
+  </style>
+  <script defer type="module" src="./main.js"></script>
+  <body>
+    <div id="container">
+      <div id="ui">
+        <label class="ui_item">Sphere Color
+          <input id="sphere_color_input" type="color">
+        </label>
+
+        <label class="ui_item">Cone Color
+          <input id="cone_color_input" type="color">
+        </label>
+
+        <div class="ui_item">
+          <label for="shininess_input">Shininess</label>
+          <input id="shininess_input" name="shininess_input" type="range" min="1" max="50" step="0.1"> =
+          <output id="shininess_out" for="shininess_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="x_trans_input">Translate Light X</label>
+          <input id="x_trans_input" name="x_trans_input" type="range" min="-50" max="50" step="-0.1"> =
+          <output id="x_out" for="x_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="y_trans_input">Translate Light Y</label>
+          <input id="y_trans_input" type="range" min="-50" max="50" step="-0.1"> =
+          <output id="y_out" for="y_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="z_trans_input">Translate Light Z</label>
+          <input id="z_trans_input" type="range" min="-50" max="50" step="-0.1"> =
+          <output id="z_out" for="z_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="distance_input">Distance</label>
+          <input id="distance_input" name="distance_input" type="range" min="-200" max="-50" step="0.1"> =
+          <output id="distance_out" for="distance_input"></output>
+        </div>
+
+      </div>
+      <canvas id="my_canvas"></canvas>
+    </div>
+  </body>
+</html>

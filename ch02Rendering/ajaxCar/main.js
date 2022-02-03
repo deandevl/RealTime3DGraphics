@@ -87,8 +87,9 @@ try {
 
     // Iterate over every part inside of the `parts` array
     parts.forEach(part => {
-      // Bind VAO
-      vaoObj.bind();
+      // rebind VAO
+      vaoObj.rebind();
+
       positionBuffer.setData(part.vertices, gl.STATIC_DRAW);
       elementBuffer.setData(part.indices, gl.STATIC_DRAW);
 

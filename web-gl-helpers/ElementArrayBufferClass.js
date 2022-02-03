@@ -21,6 +21,7 @@ export default class ElementArrayBufferClass {
     this.gl = gl;
     this.buffer_type = 'ELEMENT';
     this.data_type = type;
+    this.buffer_length = 0;
     // Create a buffer to put the element index values
     this.indexBuffer = gl.createBuffer();
   }
@@ -31,6 +32,7 @@ export default class ElementArrayBufferClass {
    * @param {number} usage Specifies the intended [usage pattern]{@link https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData} of the data store for optimization purposes.
    */
   setData(indices, usage) {
+    this.buffer_length = indices.length;
     // Bind this.buffer to WebGL's internal ELEMENT_ARRAY_BUFFER
     this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.indexBuffer);
     switch(this.data_type){
@@ -43,6 +45,14 @@ export default class ElementArrayBufferClass {
           new Uint16Array(indices), usage);
         break;
     }
+  }
+
+  /**
+   * Rebind the index buffer
+   */
+  rebind(){
+    // Bind this.buffer to WebGL's internal ELEMENT_ARRAY_BUFFER
+    this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.indexBuffer);
   }
 
   /**

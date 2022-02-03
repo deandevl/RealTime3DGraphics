@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>goraud_lambert lighting</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+    }
+    #ui {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+    .ui_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    canvas {
+      width: 900px;
+      height: 800px;
+      margin-left: 20px;
+    }
+    output {
+      color: white;
+      width: 40px;
+    }
+  </style>
+  <script defer type="module" src="./main.js"></script>
+  <body>
+    <div id="container">
+      <div id="ui">
+        <label class="ui_item">Material Diffuse
+          <input id="material_diffuse_input" type="color">
+        </label>
+
+        <label class="ui_item">Light Diffuse
+          <input id="light_diffuse_input" type="color">
+        </label>
+
+        <div class="ui_item">
+          <label for="x_trans_input">Translate Light X</label>
+          <input id="x_trans_input" name="x_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="x_out" for="x_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="y_trans_input">Translate Light Y</label>
+          <input id="y_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="y_out" for="y_trans_input"></output>
+        </div>
+
+        <div class="ui_item">
+          <label for="z_trans_input">Translate Light Z</label>
+          <input id="z_trans_input" type="range" min="-10" max="10" step="-0.1"> =
+          <output id="z_out" for="z_trans_input"></output>
+        </div>
+      </div>
+      <canvas id="my_canvas"></canvas>
+    </div>
+  </body>
+</html>

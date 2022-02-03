@@ -65,8 +65,8 @@ try {
   function draw(){
     initializeContext(gl,[0.0,0.0,0.0,1.0]);
 
-    // Bind VAO
-    vaoObj.bind();
+    // rebind VAO
+    vaoObj.rebind();
 
     switch(renderingMode){
       case 'TRIANGLES': {
